@@ -1,0 +1,22 @@
+:root {
+    /* Barva přesně podle zadání */
+    --netflix-red: rgb(214, 28, 28);
+    
+    /* Další užitečné proměnné */
+    --bg-dark: #141414;
+    --text-light: #ffffff;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: Arial, sans-serif; /* Můžeš změnit dle designu */
+    min-height: 100vh; /* Zajistí, že pozadí je přes celou obrazovku, i když je prázdná */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding: 20px; /* Obsah nebude nalepený na okrajích displeje */
+    flex-grow: 1; 
+}

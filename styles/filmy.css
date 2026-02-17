@@ -1,0 +1,101 @@
+/* Sekce s roletkou (filtrem) */
+.filter-section {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column; /* Na mobilu štítek a roletka pod sebou */
+    gap: 10px;
+}
+
+.filter-section label {
+    font-weight: bold;
+}
+
+.filter-section select {
+    padding: 10px;
+    background-color: #333;
+    color: var(--text-light);
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Magie pro galerii filmů - samo-zalamovací bez Media Queries */
+.gallery-grid {
+    display: grid;
+    /* Na mobilu má karta min 140px, zbytek místa se rovnoměrně rozdělí (1fr) */
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px; 
+    margin-top: 20px;
+}
+
+/* Styly pro dynamicky vytvořené karty filmů z TypeScriptu */
+.movie-card {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-card:hover {
+  transform: scale(1.08); /* Filmy na Netflixu po najetí vždy "vyskočí" */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    z-index: 10; /* Aby se karta při zvětšení nedostala pod ostatní */
+}
+
+.movie-poster {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Aby se obrázky nedeformovaly */
+    aspect-ratio: 2 / 3; /* Udržuje filmový poměr stran */
+}
+
+.movie-title {
+    padding: 15px 10px;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: auto; /* Zarovná název vždy hezky dolů */
+}
+
+/* Efekt po kliknutí (focus) */
+#movie-filter:focus {
+    border-color: var(--netflix-red);
+    box-shadow: 0 0 8px rgba(214, 28, 28, 0.5);
+}
+
+/* Stylování samotné roletky */
+#movie-filter {
+    background-color: #000;
+    color: var(--text-light);
+    border: 2px solid #333;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    width: 100%;
+    max-width: 300px; /* Aby nebyla na PC zbytečně široká */
+}
+
+.loading-text {
+    grid-column: 1 / -1; /* Roztáhne text načítání přes celou šířku gridu */
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--netflix-red);
+}
+
+/* Úprava filtru pro větší obrazovky */
+@media (min-width: 500px) {
+    .filter-section {
+        flex-direction: row; /* Vedle sebe na tabletu/PC */
+        align-items: center;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Větší karty na PC */
+    }
+}

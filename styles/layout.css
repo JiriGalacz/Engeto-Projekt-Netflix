@@ -1,0 +1,50 @@
+/* Hlavička a navigace */
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Tmavý, lehce průhledný podklad jako má Netflix */
+    padding: 15px 20px;
+    position: sticky; /* Zůstane nahoře i při rolování stránky */
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Pro velmi malé displeje (300px) se odkazy hezky zalomí */
+    gap: 20px;
+    justify-content: center; /* Na mobilu vycentrujeme */
+}
+
+/* Odkazy v navigaci */
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease; /* Plynulá změna barvy při najetí myší */
+}
+
+nav a:hover {
+    color: var(--netflix-red);
+}
+
+/* Ikonka šipky nahoru */
+.fa-circle-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2.5rem; 
+    color: var(--netflix-red);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.fa-circle-up:hover {
+    transform: scale(1.1); /* Efekt mírného zvětšení */
+}
+
+/* Úprava navigace pro větší obrazovky (tablety, PC) */
+@media (min-width: 600px) {
+    nav {
+        justify-content: flex-start; /* Zarovnáme doleva */
+    }
+}

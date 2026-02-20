@@ -1,0 +1,31 @@
+/* index.css - Styly pouze pro hlavní stránku */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 70vh; /* Roztáhne sekci přes většinu obrazovky */
+    padding: 20px;
+    
+    /* Netflix má na pozadí často ztmavené obrázky filmů. 
+       Zatím můžeme použít elegantní tmavý přechod. */
+    background: radial-gradient(circle, rgba(40,40,40,1) 0%, rgba(20,20,20,1) 100%);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    max-width: 800px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Zajistí čitelnost */
+    margin-bottom: 20px;
+}
+
+/* Zvětšení nadpisu na počítačích a tabletech */
+@media (min-width: 600px) {
+    h1 {
+        font-size: 4rem;
+    }
+}

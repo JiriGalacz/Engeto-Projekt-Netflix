@@ -58,4 +58,25 @@ function renderMovies(movies, container) {
         container.appendChild(movieCard);
     });
 }
+// --- 3. Registrační formulář ---
+const regForm = document.getElementById('registration-form');
+if (regForm) {
+    regForm.addEventListener('submit', (event) => {
+        // ZABRÁNÍME VÝCHOZÍMU CHOVÁNÍ! (Prohlížeč by jinak celou stránku obnovil)
+        event.preventDefault();
+        // Získáme hodnoty, které uživatel vyplnil
+        const emailInput = document.getElementById('user-email');
+        // Pro kontrolu si to vypíšeme do konzole (F12)
+        console.log("Registrace úspěšná pro email:", emailInput.value);
+        // Vytvoříme nový HTML element pro zprávu o úspěchu
+        const successMsg = document.createElement('div');
+        successMsg.classList.add('success-message');
+        // Zobrazíme tam i zadaný e-mail pro lepší pocit
+        successMsg.innerHTML = `<i class="fa-regular fa-circle-check"></i> Vítejte! Účet pro <strong>${emailInput.value}</strong> byl úspěšně vytvořen.`;
+        // Nahradíme celý formulář touhle krásnou zprávou
+        if (regForm.parentNode) {
+            regForm.parentNode.replaceChild(successMsg, regForm);
+        }
+    });
+}
 //# sourceMappingURL=main.js.map

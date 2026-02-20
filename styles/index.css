@@ -143,6 +143,34 @@ header {
 .btn-more:hover {
     background-color: rgb(190, 20, 20);
 }
+
+
+/* --- Patička --- */
+footer {
+    background-color: #000;
+    padding: 60px 10%; /* Velké odsazení zleva a zprava */
+    border-top: 8px solid #222; /* Tmavě šedý pruh, který Netflix používá k oddělení sekcí */
+}
+
+.footer-links {
+    display: grid;
+    /* Magie: Vytvoří sloupce o minimální šířce 180px, zbytek místa se rovnoměrně rozdělí */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #737373; /* Netflixová tmavší šedá pro odkazy v patičce */
+    text-decoration: underline; /* Na screenu jsou odkazy podtržené */
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff; /* Po najetí myší odkaz zesvětlá */
+}
+
+
 @media (min-width: 600px) {
     .hero-content h1 { font-size: 3.5rem; }
     .hero-content h2 { font-size: 1.8rem; }

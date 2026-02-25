@@ -20,3 +20,18 @@ main {
     padding: 20px; /* Obsah nebude nalepený na okrajích displeje */
     flex-grow: 1; 
 }
+
+.fa-circle-up {
+    position: fixed; /* Fixní pozice vůči oknu prohlížeče */
+    bottom: 20px;    /* 20px od spodního okraje */
+    right: 20px;     /* 20px od pravého okraje */
+    font-size: 3rem; /* Velikost ikonky */
+    color: var(--netflix-red); /* Červená barva */
+    cursor: pointer; /* Změní kurzor na ručičku */
+    z-index: 1000;   /* Aby byla vždy nad ostatním obsahem */
+    transition: transform 0.3s ease;
+}
+
+.fa-circle-up:hover {
+    transform: scale(1.1); /* Efekt zvětšení při najetí myší */
+}

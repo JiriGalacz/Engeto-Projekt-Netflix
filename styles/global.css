@@ -5,6 +5,7 @@
     /* Další užitečné proměnné */
     --bg-dark: #141414;
     --text-light: #ffffff;
+    --bg-black: #000000;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 }
 
 main {
-    padding: 20px; /* Obsah nebude nalepený na okrajích displeje */
+    padding: 0px;
     flex-grow: 1; 
 }
 

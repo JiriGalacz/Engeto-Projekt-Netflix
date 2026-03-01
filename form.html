@@ -13,6 +13,16 @@
     <main>
         <h2>Vytvořte si účet</h2>
         <form id="registration-form">
+
+             <div class="input-group">
+                <label for="first-name">Jméno:</label>
+                <input type="text" id="first-name" name="first-name" required placeholder="např. Jan">
+            </div>
+
+             <div class="input-group">
+                <label for="surname">Příjmení:</label>
+                <input type="text" id="surname" name="surname" required placeholder="např. Novák">
+            </div>
             
             <div class="input-group">
                 <label for="user-email">E-mailová adresa:</label>
@@ -22,6 +32,13 @@
             <div class="input-group">
                 <label for="user-password">Heslo:</label>
                 <input type="password" id="user-password" name="password" required minlength="8">
+                <small class="form-help">Heslo musí obsahovat alespoň 8 znaků.</small>
+            </div>
+
+            <div class="input-group">
+                <label for="user-repeat-password">Heslo znovu:</label>
+                <input type="password" id="user-repeat-password" name="repeat-password" required minlength="8">
+                <span id="password-error" class="error-text hidden">Hesla se neshodují!</span>
             </div>
 
             <div class="input-group">

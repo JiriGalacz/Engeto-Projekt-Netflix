@@ -1,12 +1,30 @@
-/* Hlavička a navigace */
+
+/* Globální hlavička s logem pro všechny stránky */
 header {
-    background-color: rgba(0, 0, 0, 0.8); /* Tmavý, lehce průhledný podklad jako má Netflix */
-    padding: 15px 20px;
-    position: sticky; /* Zůstane nahoře i při rolování stránky */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: transparent; /* Aby to nerušilo pozadí stránky */
+    width: 100%;
+    position: absolute; /* Přichytí logo nahoru, aniž by posouvalo zbytek stránky */
     top: 0;
+    left: 0;
     z-index: 100;
 }
 
+
+.logo {
+display: block;
+    /* Cesta k tvému logu */
+    background-image: url('../pictures/netflix-logo.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* Musíš definovat rozměry, jinak prázdný odkaz nepůjde vidět */
+    width: 150px; 
+    height: 45px;   
+}
+/* Navigace */
 nav {
     display: flex;
     flex-wrap: wrap; /* Pro velmi malé displeje (300px) se odkazy hezky zalomí */

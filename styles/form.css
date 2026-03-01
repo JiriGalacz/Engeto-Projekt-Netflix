@@ -1,4 +1,17 @@
 /* Vycentrování celého obsahu na stránce s registrací */
+.btn-main-page {
+    background-color: var(--netflix-red);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.btn-main-page:hover {
+    background-color: rgb(190, 20, 20);
+}
 main {
     display: flex;
     flex-direction: column;
@@ -8,6 +21,7 @@ main {
 }
 
 main h2 {
+    margin-top: 100px;
     margin-bottom: 25px;
     font-size: 2.2rem;
     text-align: center;
@@ -106,4 +120,21 @@ main h2 {
     text-align: center;
     font-size: 1.2rem;
     border: 1px solid #46d369;
+}
+
+
+/* --- ÚPRAVA PRO DESKTOP: 2 SLOUPEČKY --- */
+@media (min-width: 600px) {
+    #registration-form {
+        display: grid; /* Změníme flex na grid */
+        grid-template-columns: 1fr 1fr; /* Vytvoří 2 stejně široké sloupce */
+        max-width: 700px; /* Zvětšíme max. šířku, aby se 2 sloupce hezky vešly */
+        align-items: start; /* Zarovná políčka hezky k hornímu okraji */
+    }
+
+    /* Tlačítko pro registraci chceme roztáhnout přes oba sloupce (úplně dolů) */
+    #registration-form button {
+        grid-column: 1 / -1; 
+        margin-top: 15px;
+    }
 }

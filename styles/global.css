@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: var(--bg-dark);
+    background-color: var(--bg-black);
     color: var(--text-light);
     font-family: Arial, sans-serif; /* Můžeš změnit dle designu */
     min-height: 100vh; /* Zajistí, že pozadí je přes celou obrazovku, i když je prázdná */

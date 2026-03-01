@@ -1,31 +1,13 @@
-/* --- Hlavička (přepisuje layout.css jen pro index) --- */
-header {
-    display: flex;
-    justify-content: space-between; /* Rozhodí logo a tlačítko od sebe */
-    align-items: center;
-    padding: 15px 5%;
-    position: sticky; 
-    top: 0;
-    left: 0;
-    width: 100%;
+header {  
     background-color: var(--bg-black);
-    z-index: 100; /* Aby byla vždy úplně nahoře nad vším */
-}
-
-.logo {
-    color: var(--netflix-red);
-    font-size: 2rem;
-    font-weight: 900;
-    font-family: 'Arial Black', sans-serif;
-    letter-spacing: 1px;
-   
+    position: sticky; 
 }
 
 .btn-register {
     background-color: var(--netflix-red);
     color: white;
     padding: 8px 16px;
-    border-radius: 4px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
@@ -39,13 +21,15 @@ header {
 /* --- První sekce (Hero) --- */
 .hero {
     position: relative;
-    min-height: calc(100vh - 65px);
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* Následující řádek vytvoří tmavý překryv + načte obrázek z tvé složky */
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.9) 100%), 
+    background: linear-gradient(to top, 
+                rgb(0, 0, 0, 1) 0%, 
+                rgba(0, 0, 0, 0.7) 50%, 
+                rgba(0, 0, 0, 0.5) 100%), 
                 url('../pictures/background.jpg') center/cover no-repeat;
     padding: 20px;
 }

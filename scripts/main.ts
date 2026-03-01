@@ -23,8 +23,45 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 2. Registrační formulář ---
     const regForm = document.getElementById('registration-form') as HTMLFormElement | null;
     if (regForm) {
+        
+        // Políčka pro heslo
+        const passwordInput = document.getElementById('user-password') as HTMLInputElement;
+        const repeatPasswordInput = document.getElementById('user-repeat-password') as HTMLInputElement;
+        const passwordErrorMsg = document.getElementById('password-error') as HTMLSpanElement;
+
+        // Funkce pro dynamickou kontrolu shody hesel
+    const validatePasswords = () => {
+            // KROK 1: Pokud je druhé políčko úplně prázdné, chybu schováme
+            if (repeatPasswordInput.value === '') {
+                passwordErrorMsg.classList.add('hidden');
+                repeatPasswordInput.classList.remove('input-error');
+                repeatPasswordInput.setCustomValidity("");
+                return;
+            }
+
+            // KROK 2: Porovnání
+            if (passwordInput.value !== repeatPasswordInput.value) {
+                // CHYBA! Odebereme 'hidden' (ukážeme text) a přidáme červený rámeček
+                passwordErrorMsg.classList.remove('hidden');
+                repeatPasswordInput.classList.add('input-error');
+                repeatPasswordInput.setCustomValidity("Zadaná hesla se neshodují!"); 
+            } else {
+                // VŠE V POŘÁDKU! Přidáme 'hidden' (schováme text) a odebereme rámeček
+                passwordErrorMsg.classList.add('hidden');
+                repeatPasswordInput.classList.remove('input-error');
+                repeatPasswordInput.setCustomValidity("");
+            }
+        };
+
+        // Kontrolovat při každém psaní do políčka
+        if (passwordInput && repeatPasswordInput) {
+            passwordInput.addEventListener('input', validatePasswords);
+            repeatPasswordInput.addEventListener('input', validatePasswords);
+        }
+
         regForm.addEventListener('submit', (event) => {
             event.preventDefault();
+            
             const emailInput = document.getElementById('user-email') as HTMLInputElement;
             console.log("Registrace úspěšná pro email:", emailInput.value);
 

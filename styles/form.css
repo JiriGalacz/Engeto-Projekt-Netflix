@@ -4,6 +4,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 50px 20px; /* Odsazení shora a zespodu, zleva a zprava trochu méně */
 }
 
 main h2 {
@@ -52,6 +53,30 @@ main h2 {
 .input-group input:focus {
     background-color: #444;
     outline: 2px solid var(--netflix-red); /* Místo výchozího modrého dáme náš červený */
+}
+
+.input-group .form-help {
+    font-size: 0.7rem;
+    color: #bbb;
+}
+
+/* Stylování chybového textu */
+.error-text {
+    color: var(--netflix-red);
+    font-size: 0.85rem;
+    margin-top: -3px;
+    font-weight: bold;
+}
+
+/* Třída pro skrytí elementu */
+.hidden {
+    display: none;
+}
+
+/* Třída, kterou přidáme políčku přes JS, když je v něm chyba */
+.input-error {
+    border: 2px solid var(--netflix-red) !important;
+    background-color: rgba(214, 28, 28, 0.1) !important; /* Lehce červené pozadí */
 }
 
 /* Netflix červené tlačítko */

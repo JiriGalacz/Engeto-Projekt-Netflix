@@ -30,7 +30,16 @@ main {
     color: var(--netflix-red); /* Červená barva */
     cursor: pointer; /* Změní kurzor na ručičku */
     z-index: 1000;   /* Aby byla vždy nad ostatním obsahem */
-    transition: transform 0.3s ease;
+    /* Schování a plynulý přechod */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Třída, kterou přidáme přes JavaScript pro zobrazení */
+.fa-circle-up.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 .fa-circle-up:hover {

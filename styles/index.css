@@ -89,6 +89,7 @@ header {
 
 /* --- Druhá sekce (Ukázka 3 filmů) --- */
 .featured-movies {
+    margin-top: 20px;
     display: flex;
     flex-direction: column; /* Řadí obsah (plakáty a tlačítko) pod sebe */
     align-items: center;    /* Vycentruje vše na střed */

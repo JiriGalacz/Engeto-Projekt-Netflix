@@ -122,6 +122,17 @@ main h2 {
     border: 1px solid #46d369;
 }
 
+/* Políčko je správně vyplněné (a uživatel do něj už něco napsal) */
+.input-group input:not(:placeholder-shown):valid {
+    outline: 2px solid #46d369 !important;
+    /* Volitelně můžete přidat i velmi jemné zelené pozadí, podobně jako u vaší chyby: */
+    /* background-color: rgba(70, 211, 105, 0.05); */
+}
+
+/* Políčko je vyplněné špatně (a uživatel do něj už něco napsal) */
+.input-group input:not(:placeholder-shown):invalid {
+    outline: 2px solid var(--netflix-red) !important;
+}
 
 /* ==========================================================================
    TABLET (min-width: 768px)
@@ -146,5 +157,5 @@ main h2 {
    ========================================================================== */
    @media (min-width: 992px) {
 
-    
+
    }

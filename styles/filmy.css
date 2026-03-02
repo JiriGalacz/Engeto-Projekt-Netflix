@@ -89,8 +89,11 @@
     color: var(--netflix-red);
 }
 
-/* Úprava filtru pro větší obrazovky */
-@media (min-width: 500px) {
+
+/* ==========================================================================
+   TABLET (min-width: 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
     .filter-section {
         flex-direction: row; /* Vedle sebe na tabletu/PC */
         align-items: center;
@@ -99,3 +102,11 @@
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Větší karty na PC */
     }
 }
+
+/* ==========================================================================
+   DESKTOP (min-width: 992px)
+   ========================================================================== */
+   @media (min-width: 992px) {
+
+    
+   }

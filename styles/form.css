@@ -123,8 +123,10 @@ main h2 {
 }
 
 
-/* --- ÚPRAVA PRO DESKTOP: 2 SLOUPEČKY --- */
-@media (min-width: 600px) {
+/* ==========================================================================
+   TABLET (min-width: 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
     #registration-form {
         display: grid; /* Změníme flex na grid */
         grid-template-columns: 1fr 1fr; /* Vytvoří 2 stejně široké sloupce */
@@ -138,3 +140,11 @@ main h2 {
         margin-top: 15px;
     }
 }
+
+/* ==========================================================================
+   DESKTOP (min-width: 992px)
+   ========================================================================== */
+   @media (min-width: 992px) {
+
+    
+   }

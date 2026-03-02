@@ -8,6 +8,7 @@ header {
     background-color: transparent; /* Aby to nerušilo pozadí stránky */
     width: 100%;
     position: absolute; /* Přichytí logo nahoru, aniž by posouvalo zbytek stránky */
+    height: 60px;
     top: 0;
     left: 0;
     z-index: 100;
@@ -15,13 +16,12 @@ header {
 
 
 .logo {
-display: block;
-    /* Cesta k tvému logu */
+    display: block;
     background-image: url('../pictures/netflix-logo.png'); 
     background-size: contain;
     background-repeat: no-repeat;
-    /* Musíš definovat rozměry, jinak prázdný odkaz nepůjde vidět */
-    width: 150px; 
+    margin-top: 10px;
+    width: 120px; 
     height: 45px;   
 }
 /* Navigace */
@@ -60,9 +60,20 @@ nav a:hover {
     transform: scale(1.1); /* Efekt mírného zvětšení */
 }
 
-/* Úprava navigace pro větší obrazovky (tablety, PC) */
-@media (min-width: 600px) {
-    nav {
-        justify-content: flex-start; /* Zarovnáme doleva */
-    }
+/* ==========================================================================
+   TABLET (min-width: 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+    header {height: 80px; }
+    .logo { width: 150px; height: 55px; }
+    nav {justify-content: flex-start;}
+
+
+/* ==========================================================================
+   DESKTOP (min-width: 992px)
+   ========================================================================== */
+@media (min-width: 992px) {
+    
+}
+
 }

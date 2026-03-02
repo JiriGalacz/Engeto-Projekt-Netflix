@@ -41,18 +41,18 @@ header {
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 15px;
 }
 
 .hero-content h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: normal;
     margin-bottom: 25px;
 }
 
 .hero-content p {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     margin-bottom: 15px;
 }
 
@@ -145,6 +145,7 @@ header {
 footer {
     background-color: #000;
     padding: 60px 10%; /* Velké odsazení zleva a zprava */
+    margin-bottom: 20px;
 }
 
 .footer-links {
@@ -165,18 +166,32 @@ footer {
     color: #fff; /* Po najetí myší odkaz zesvětlá */
 }
 
-
-@media (min-width: 600px) {
-    .logo { font-size: 2.5rem; }
+/* ==========================================================================
+   TABLET (min-width: 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
     .btn-register { font-size: 1.2rem; padding: 10px 20px; }
     .hero-content h1 { font-size: 3.5rem; }
-    .hero-content h2 { font-size: 1.8rem; }
+    .hero-content h2 { font-size: 2rem; }
+    .hero-content p { font-size: 1.5rem; }
     .email-form { 
         flex-direction: row; /* Na PC vedle sebe */
         justify-content: center;
     }
     .email-form input { border-radius: 4px 0 0 4px; }
     .email-form button { border-radius: 0 4px 4px 0; width: auto; }
-    .footer-links {grid-template-columns: repeat(4, 1fr);}
+    .footer-links {grid-template-columns: repeat(3, 1fr);}
+    .footer-links a { font-size: 1.2rem; }
 
 }
+
+/* ==========================================================================
+   DESKTOP (min-width: 992px)
+   ========================================================================== */
+   @media (min-width: 992px) {
+    .btn-register { font-size: 1.5rem; padding: 12px 24px; }
+    .hero-content h1 { font-size: 4rem; }
+    .hero-content h2 { font-size: 2.5rem; }
+    .hero-content p { font-size: 1.8rem; }
+    .footer-links {grid-template-columns: repeat(4, 1fr);}
+   }

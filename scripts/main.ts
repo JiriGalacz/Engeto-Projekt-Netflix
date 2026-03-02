@@ -77,7 +77,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 3. Tlačítko pro návrat nahoru ---
     const scrollUpBtn = document.querySelector('.fa-circle-up') as HTMLElement | null;
+
     if (scrollUpBtn) {
+        // Funkce pro kontrolu pozice scrollu
+        window.addEventListener('scroll', () => {
+            // Pokud odscrolujeme více než 300px odshora, přidáme třídu 'visible'
+            if (window.scrollY > 300) {
+                scrollUpBtn.classList.add('visible');
+            } else {
+                scrollUpBtn.classList.remove('visible');
+            }
+        });
+
+        // Původní funkce pro kliknutí zůstává
         scrollUpBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });

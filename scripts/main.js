@@ -18,6 +18,38 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 2. Registrační formulář ---
     const regForm = document.getElementById('registration-form');
     if (regForm) {
+        // Políčka pro heslo
+        const passwordInput = document.getElementById('user-password');
+        const repeatPasswordInput = document.getElementById('user-repeat-password');
+        const passwordErrorMsg = document.getElementById('password-error');
+        // Funkce pro dynamickou kontrolu shody hesel
+        const validatePasswords = () => {
+            // KROK 1: Pokud je druhé políčko úplně prázdné, chybu schováme
+            if (repeatPasswordInput.value === '') {
+                passwordErrorMsg.classList.add('hidden');
+                repeatPasswordInput.classList.remove('input-error');
+                repeatPasswordInput.setCustomValidity("");
+                return;
+            }
+            // KROK 2: Porovnání
+            if (passwordInput.value !== repeatPasswordInput.value) {
+                // CHYBA! Odebereme 'hidden' (ukážeme text) a přidáme červený rámeček
+                passwordErrorMsg.classList.remove('hidden');
+                repeatPasswordInput.classList.add('input-error');
+                repeatPasswordInput.setCustomValidity("Zadaná hesla se neshodují!");
+            }
+            else {
+                // VŠE V POŘÁDKU! Přidáme 'hidden' (schováme text) a odebereme rámeček
+                passwordErrorMsg.classList.add('hidden');
+                repeatPasswordInput.classList.remove('input-error');
+                repeatPasswordInput.setCustomValidity("");
+            }
+        };
+        // Kontrolovat při každém psaní do políčka
+        if (passwordInput && repeatPasswordInput) {
+            passwordInput.addEventListener('input', validatePasswords);
+            repeatPasswordInput.addEventListener('input', validatePasswords);
+        }
         regForm.addEventListener('submit', (event) => {
             event.preventDefault();
             const emailInput = document.getElementById('user-email');
@@ -33,6 +65,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 3. Tlačítko pro návrat nahoru ---
     const scrollUpBtn = document.querySelector('.fa-circle-up');
     if (scrollUpBtn) {
+        // Funkce pro kontrolu pozice scrollu
+        window.addEventListener('scroll', () => {
+            // Pokud odscrolujeme více než 300px odshora, přidáme třídu 'visible'
+            if (window.scrollY > 300) {
+                scrollUpBtn.classList.add('visible');
+            }
+            else {
+                scrollUpBtn.classList.remove('visible');
+            }
+        });
+        // Původní funkce pro kliknutí zůstává
         scrollUpBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });

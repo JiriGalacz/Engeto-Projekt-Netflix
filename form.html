@@ -1,54 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix Clone - Registrace</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/form.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/form.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo"></a>
+      <a href="index.html" class="btn-main-page">Hlavní stránka</a>
+    </header>
     <main>
-        <h2>Vytvořte si účet</h2>
-        <form id="registration-form">
+      <h2>Vytvořte si účet</h2>
+      <form id="registration-form">
+        <div class="input-group">
+          <label for="first-name">Jméno:</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            required
+            placeholder="např. Jan"
+          />
+        </div>
 
-             <div class="input-group">
-                <label for="first-name">Jméno:</label>
-                <input type="text" id="first-name" name="first-name" required placeholder="např. Jan">
-            </div>
+        <div class="input-group">
+          <label for="surname">Příjmení:</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            required
+            placeholder="např. Novák"
+          />
+        </div>
 
-             <div class="input-group">
-                <label for="surname">Příjmení:</label>
-                <input type="text" id="surname" name="surname" required placeholder="např. Novák">
-            </div>
-            
-            <div class="input-group">
-                <label for="user-email">E-mailová adresa:</label>
-                <input type="email" id="user-email" name="email" required placeholder="např. novak@email.cz">
-            </div>
+        <div class="input-group">
+          <label for="user-email">E-mailová adresa:</label>
+          <input
+            type="email"
+            id="user-email"
+            name="email"
+            required
+            placeholder="např. novak@email.cz"
+          />
+        </div>
 
-            <div class="input-group">
-                <label for="user-password">Heslo:</label>
-                <input type="password" id="user-password" name="password" required minlength="8">
-                <small class="form-help">Heslo musí obsahovat alespoň 8 znaků.</small>
-            </div>
+        <div class="input-group">
+          <label for="user-password">Heslo:</label>
+          <input
+            type="password"
+            id="user-password"
+            name="password"
+            required
+            minlength="8"
+            placeholder="min. 8 znaků"
+          />
+          <small class="form-help">Heslo musí obsahovat alespoň 8 znaků.</small>
+        </div>
 
-            <div class="input-group">
-                <label for="user-repeat-password">Heslo znovu:</label>
-                <input type="password" id="user-repeat-password" name="repeat-password" required minlength="8">
-                <span id="password-error" class="error-text hidden">Hesla se neshodují!</span>
-            </div>
+        <div class="input-group">
+          <label for="user-repeat-password">Heslo znovu:</label>
+          <input
+            type="password"
+            id="user-repeat-password"
+            name="repeat-password"
+            required
+            minlength="8"
+            placeholder="Zopakujte heslo"
+          />
+          <span id="password-error" class="error-text hidden"
+            >Hesla se neshodují!</span
+          >
+        </div>
 
-            <div class="input-group">
-                <label for="user-phone">Telefonní číslo (volitelné):</label>
-                <input type="tel" id="user-phone" name="phone" pattern="[0-9]{9}" placeholder="123456789">
-            </div>
+        <div class="input-group">
+          <label for="user-phone">Telefonní číslo (volitelné):</label>
+          <input
+            type="tel"
+            id="user-phone"
+            name="phone"
+            pattern="[0-9]{9}"
+            placeholder="123456789"
+          />
+        </div>
 
-            <button type="submit">Zaregistrovat se</button>
-        </form>
+        <button type="submit">Zaregistrovat se</button>
+      </form>
     </main>
     <script type="module" src="scripts/main.js"></script>
-</body>
+  </body>
 </html>

@@ -1,69 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Netflix Clone - Domů</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/index.css">
-</head>
-<body>
-<header>
-    <div class="logo">NETFLIX</div> 
-    <a href="form.html" class="btn-register">Registrace</a>
-</header>
-<main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Neomezené sledování filmů, TV pořadů a dalšího obsahu</h1>
-                <h2>Už od 239 Kč. Zrušte kdykoli.</h2>
-                <p>Jste připraveni se dívat? Pro vytvoření nebo obnovení členství zadejte e-mail.</p>
-                
-                <form class="email-form">
-                    <input type="email" placeholder="E-mailová adresa" required>
-                    <button type="submit">Začít</button>
-                </form>
-            </div>
-        </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone - Domů</title>
 
-        <section class="featured-movies">
-            <div class="posters-container">
-                <img src="pictures/avengers.jpg" alt="Avengers: Infinity War">
-                <img src="pictures/bugs-life.jpeg" alt="A Bug's Life">
-                <img src="pictures/thor.jpeg" alt="Thor">
-            </div>
-            <a href="filmy.html" class="btn-more">Najít další filmy</a>
-        </section>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo"></a>
+      <a href="form.html" class="btn-register">Registrace</a>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Neomezené sledování filmů, TV pořadů a dalšího obsahu</h1>
+          <h2>Už od 239 Kč. Zrušte kdykoli.</h2>
+          <p>
+            Jste připraveni se dívat? Pro vytvoření nebo obnovení členství
+            zadejte e-mail.
+          </p>
+
+          <form class="email-form">
+            <input type="email" placeholder="E-mailová adresa" required />
+            <button type="submit">Začít</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="featured-movies">
+        <div class="posters-container">
+          <img src="pictures/avengers.jpg" alt="Avengers: Infinity War" />
+          <img src="pictures/bugs-life.jpeg" alt="A Bug's Life" />
+          <img src="pictures/thor.jpeg" alt="Thor" />
+        </div>
+        <a href="filmy.html" class="btn-more">Najít další filmy</a>
+      </section>
     </main>
 
     <footer>
-        <div class="footer-links">
-            <a href="#">Často kladené dotazy</a>
-            <a href="#">Centrum zákaznické podpory</a>
-            <a href="#">Účet</a>
-            <a href="#">Pro média</a>
-            <a href="#">Vztahy s investory</a>
-            <a href="#">Kariéra</a>
-            <a href="#">Uplatněte dárkové poukazy</a>
-            <a href="#">Koupit dárkové poukazy</a>
-            <a href="#">Jak se dívat</a>
-            <a href="#">Podmínky používání</a>
-            <a href="#">Soukromí</a>
-            <a href="#">Nastavení souborů cookie</a>
-            <a href="#">Podnikové informace</a>
-            <a href="#">Kontaktujte nás</a>
-            <a href="#">Test rychlosti</a>
-            <a href="#">Právní záruka</a>
-            <a href="#">Právní oznámení</a>
-            <a href="#">Uvádí jedině Netflixi</a>
-            <a href="#">Reklamy</a>
-        </div>
+      <div class="footer-links">
+        <a href="#">Často kladené dotazy</a>
+        <a href="#">Centrum zákaznické podpory</a>
+        <a href="#">Účet</a>
+        <a href="#">Pro média</a>
+        <a href="#">Vztahy s investory</a>
+        <a href="#">Kariéra</a>
+        <a href="#">Uplatněte dárkové poukazy</a>
+        <a href="#">Koupit dárkové poukazy</a>
+        <a href="#">Jak se dívat</a>
+        <a href="#">Podmínky používání</a>
+        <a href="#">Soukromí</a>
+        <a href="#">Nastavení souborů cookie</a>
+        <a href="#">Podnikové informace</a>
+        <a href="#">Kontaktujte nás</a>
+        <a href="#">Test rychlosti</a>
+        <a href="#">Právní záruka</a>
+        <a href="#">Právní oznámení</a>
+        <a href="#">Uvádí jedině Netflix</a>
+        <a href="#">Reklamy</a>
+      </div>
     </footer>
     <i class="fa-regular fa-circle-up"></i>
     <script type="module" src="scripts/main.js"></script>
-    </body>
+  </body>
 </html>

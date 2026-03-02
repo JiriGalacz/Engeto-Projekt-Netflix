@@ -1,161 +1,170 @@
 /* Vycentrování celého obsahu na stránce s registrací */
 .btn-main-page {
-    background-color: var(--netflix-red);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+  background-color: var(--netflix-red);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 .btn-main-page:hover {
-    background-color: rgb(190, 20, 20);
+  background-color: rgb(190, 20, 20);
 }
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 50px 20px; /* Odsazení shora a zespodu, zleva a zprava trochu méně */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 20px; /* Odsazení shora a zespodu, zleva a zprava trochu méně */
 }
 
 main h2 {
-    margin-top: 100px;
-    margin-bottom: 25px;
-    font-size: 2.2rem;
-    text-align: center;
+  margin-top: 100px;
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+  text-align: center;
 }
 
 /* Samotný box formuláře */
 #registration-form {
-    background-color: rgba(0, 0, 0, 0.75); /* Tmavý průhledný box */
-    padding: 40px 30px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px; /* Aby nebyl na PC přes celou obrazovku */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  background-color: rgba(0, 0, 0, 0.75); /* Tmavý průhledný box */
+  padding: 40px 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px; /* Aby nebyl na PC přes celou obrazovku */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Obal pro label a input */
 .input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .input-group label {
-    font-size: 1rem;
-    font-weight: 500;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 /* Políčka pro psaní */
 .input-group input {
-    background-color: #333;
-    color: var(--text-light);
-    border: none;
-    border-radius: 4px;
-    padding: 12px 15px;
-    font-size: 1rem;
-    outline: none; /* Skryje výchozí modrý rámeček prohlížeče */
-    transition: background-color 0.3s ease, outline 0.3s ease;
+  background-color: #333;
+  color: var(--text-light);
+  border: none;
+  border-radius: 4px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  outline: none; /* Skryje výchozí modrý rámeček prohlížeče */
+  transition:
+    background-color 0.3s ease,
+    outline 0.3s ease;
 }
 
 /* Efekt po kliknutí do políčka (focus) */
 .input-group input:focus {
-    background-color: #444;
-    outline: 2px solid var(--netflix-red); /* Místo výchozího modrého dáme náš červený */
+  background-color: #444;
+  outline: 2px solid var(--netflix-red); /* Místo výchozího modrého dáme náš červený */
 }
 
 .input-group .form-help {
-    font-size: 0.7rem;
-    color: #bbb;
+  font-size: 0.7rem;
+  color: #bbb;
 }
 
 /* Stylování chybového textu */
 .error-text {
-    color: var(--netflix-red);
-    font-size: 0.85rem;
-    margin-top: -3px;
-    font-weight: bold;
+  color: var(--netflix-red);
+  font-size: 0.85rem;
+  margin-top: -3px;
+  font-weight: bold;
 }
 
 /* Třída pro skrytí elementu */
 .hidden {
-    display: none;
+  display: none;
 }
 
 /* Třída, kterou přidáme políčku přes JS, když je v něm chyba */
 .input-error {
-    border: 2px solid var(--netflix-red) !important;
-    background-color: rgba(214, 28, 28, 0.1) !important; /* Lehce červené pozadí */
+  border: 2px solid var(--netflix-red) !important;
+  background-color: rgba(
+    214,
+    28,
+    28,
+    0.1
+  ) !important; /* Lehce červené pozadí */
 }
 
 /* Netflix červené tlačítko */
 #registration-form button {
-    background-color: var(--netflix-red);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
+  background-color: var(--netflix-red);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
 #registration-form button:hover {
-    background-color: rgb(190, 20, 20); /* O něco tmavší červená při najetí myší */
+  background-color: rgb(
+    190,
+    20,
+    20
+  ); /* O něco tmavší červená při najetí myší */
 }
 
 /* Třída pro zprávu o úspěchu (tu vytvoříme přes TypeScript) */
 .success-message {
-    color: #46d369; /* Zelená barva pro úspěch */
-    background-color: rgba(70, 211, 105, 0.1);
-    padding: 20px;
-    border-radius: 4px;
-    text-align: center;
-    font-size: 1.2rem;
-    border: 1px solid #46d369;
+  color: #46d369; /* Zelená barva pro úspěch */
+  background-color: rgba(70, 211, 105, 0.1);
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 1px solid #46d369;
 }
 
 /* Políčko je správně vyplněné (a uživatel do něj už něco napsal) */
 .input-group input:not(:placeholder-shown):valid {
-    outline: 2px solid #46d369 !important;
-    /* Volitelně můžete přidat i velmi jemné zelené pozadí, podobně jako u vaší chyby: */
-    /* background-color: rgba(70, 211, 105, 0.05); */
+  outline: 2px solid #46d369 !important;
+  /* Volitelně můžete přidat i velmi jemné zelené pozadí, podobně jako u vaší chyby: */
+  /* background-color: rgba(70, 211, 105, 0.05); */
 }
 
 /* Políčko je vyplněné špatně (a uživatel do něj už něco napsal) */
 .input-group input:not(:placeholder-shown):invalid {
-    outline: 2px solid var(--netflix-red) !important;
+  outline: 2px solid var(--netflix-red) !important;
 }
 
 /* ==========================================================================
    TABLET (min-width: 768px)
    ========================================================================== */
 @media (min-width: 768px) {
-    #registration-form {
-        display: grid; /* Změníme flex na grid */
-        grid-template-columns: 1fr 1fr; /* Vytvoří 2 stejně široké sloupce */
-        max-width: 700px; /* Zvětšíme max. šířku, aby se 2 sloupce hezky vešly */
-        align-items: start; /* Zarovná políčka hezky k hornímu okraji */
-    }
+  #registration-form {
+    display: grid; /* Změníme flex na grid */
+    grid-template-columns: 1fr 1fr; /* Vytvoří 2 stejně široké sloupce */
+    max-width: 700px; /* Zvětšíme max. šířku, aby se 2 sloupce hezky vešly */
+    align-items: start; /* Zarovná políčka hezky k hornímu okraji */
+  }
 
-    /* Tlačítko pro registraci chceme roztáhnout přes oba sloupce (úplně dolů) */
-    #registration-form button {
-        grid-column: 1 / -1; 
-        margin-top: 15px;
-    }
+  /* Tlačítko pro registraci chceme roztáhnout přes oba sloupce (úplně dolů) */
+  #registration-form button {
+    grid-column: 1 / -1;
+    margin-top: 15px;
+  }
 }
 
 /* ==========================================================================
    DESKTOP (min-width: 992px)
    ========================================================================== */
-   @media (min-width: 992px) {
-
-
-   }
+@media (min-width: 992px) {
+}

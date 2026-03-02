@@ -1,34 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix Clone - Výběr filmů</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/filmy.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/filmy.css" />
+  </head>
+  <body>
     <header>
-        <a href="index.html" class="logo"></a>
+      <a href="index.html" class="logo"></a>
     </header>
     <main>
-        <h2>Vyhledejte si svůj oblíbený film</h2>
-        
-        <div class="filter-section">
-            <label for="movie-filter">Vyberte téma:</label>
-            <select id="movie-filter">
-                <option value="" disabled selected>Vyberte...</option>
-                <option value="girl">Girl</option>
-                <option value="boy">Boy</option>
-                <option value="love">Love</option>
-                </select>
-        </div>
+      <h2>Vyhledejte si svůj oblíbený film</h2>
 
-        <section id="movie-gallery" class="gallery-grid">
-            </section>
+      <div class="filter-section">
+        <label for="movie-filter">Vyberte téma:</label>
+        <select id="movie-filter">
+          <option value="" disabled selected>Vyberte...</option>
+          <option value="girl">Dívka (Girl)</option>
+          <option value="boy">Chlapec (Boy)</option>
+          <option value="love">Láska (Love)</option>
+
+          <option value="batman">Batman</option>
+          <option value="superman">Superman</option>
+          <option value="zombie">Zombie</option>
+          <option value="star">Vesmír (Star)</option>
+          <option value="dog">Pes (Dog)</option>
+          <option value="war">Válka (War)</option>
+          <option value="magic">Magie (Magic)</option>
+        </select>
+      </div>
+
+      <section id="movie-gallery" class="gallery-grid"></section>
     </main>
     <script type="module" src="scripts/main.js"></script>
-</body>
+  </body>
 </html>

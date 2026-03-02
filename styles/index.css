@@ -1,197 +1,227 @@
-header {  
-    background-color: var(--bg-black);
-    position: sticky; 
+header {
+  background-color: var(--bg-black);
+  position: sticky;
 }
 
 .btn-register {
-    background-color: var(--netflix-red);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    
+  background-color: var(--netflix-red);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 .btn-register:hover {
-    background-color: rgb(190, 20, 20);
+  background-color: rgb(190, 20, 20);
 }
 
 /* --- První sekce (Hero) --- */
 .hero {
-    position: relative;
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(to top, 
-                rgb(0, 0, 0, 1) 0%, 
-                rgba(0, 0, 0, 0.7) 50%, 
-                rgba(0, 0, 0, 0.5) 100%), 
-                url('../pictures/background.jpg') center/cover no-repeat;
-    padding: 20px;
-    
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(
+      to top,
+      rgb(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url("../pictures/background.jpg") center/cover no-repeat;
+  padding: 20px;
 }
 
 .hero-content {
-    max-width: 700px;
-    margin-top: 50px; /* Posunutí obsahu pod hlavičku */
+  max-width: 700px;
+  margin-top: 50px; /* Posunutí obsahu pod hlavičku */
 }
 
 .hero-content h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
 .hero-content h2 {
-    font-size: 1rem;
-    font-weight: normal;
-    margin-bottom: 25px;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 25px;
 }
 
 .hero-content p {
-    font-size: 0.8rem;
-    margin-bottom: 15px;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
 }
 
 /* Formulář s e-mailem a tlačítkem vedle sebe */
 .email-form {
-    display: flex;
-    flex-direction: column; /* Na mobilech pod sebou */
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  flex-direction: column; /* Na mobilech pod sebou */
+  gap: 10px;
+  align-items: center;
 }
 
 .email-form input {
-    padding: 15px;
-    font-size: 1rem;
-    width: 100%;
-    max-width: 400px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 1px solid gray;
-    color: white;
-    border-radius: 4px;
+  padding: 15px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid gray;
+  color: white;
+  border-radius: 4px;
 }
 
 .email-form button {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    background-color: var(--netflix-red);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 100%;
-    max-width: 200px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: var(--netflix-red);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
 }
 
 /* --- Druhá sekce (Ukázka 3 filmů) --- */
 .featured-movies {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column; /* Řadí obsah (plakáty a tlačítko) pod sebe */
-    align-items: center;    /* Vycentruje vše na střed */
-    padding: 60px 20px;
-    background-color: #000; /* Černé pozadí podle vzoru */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Řadí obsah (plakáty a tlačítko) pod sebe */
+  align-items: center; /* Vycentruje vše na střed */
+  padding: 60px 20px;
+  background-color: #000; /* Černé pozadí podle vzoru */
 }
 
 /* Kontejner, ve kterém leží pouze ty 3 obrázky */
 .posters-container {
-    display: flex;
-    flex-wrap: wrap; /* Na malých mobilech se obrázky zlomí pod sebe */
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 40px; /* Udělá místo nad tlačítkem */
+  display: flex;
+  flex-wrap: wrap; /* Na malých mobilech se obrázky zlomí pod sebe */
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px; /* Udělá místo nad tlačítkem */
 }
 
 /* Samotné obrázky (plakáty) */
 .posters-container img {
-    width: 100%;
-    max-width: 250px; /* Na PC nebudou větší než 250px */
-    border-radius: 4px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 250px; /* Na PC nebudou větší než 250px */
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* Efekt povyskočení po najetí myši */
 .posters-container img:hover {
-    transform: scale(1.08); 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
-    cursor: pointer;
-    z-index: 10;
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  z-index: 10;
 }
 
 /* Červené tlačítko pod plakáty */
 .btn-more {
-    background-color: var(--netflix-red);
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
+  background-color: var(--netflix-red);
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
 }
 
 .btn-more:hover {
-    background-color: rgb(190, 20, 20);
+  background-color: rgb(190, 20, 20);
 }
-
 
 /* --- Patička --- */
 footer {
-    background-color: #000;
-    padding: 60px 10%; /* Velké odsazení zleva a zprava */
-    margin-bottom: 20px;
+  background-color: #000;
+  padding: 60px 10%; /* Velké odsazení zleva a zprava */
+  margin-bottom: 20px;
 }
 
 .footer-links {
-    display: grid;
-    /* Magie: Vytvoří sloupce o minimální šířce 180px, zbytek místa se rovnoměrně rozdělí */
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  display: grid;
+  /* Magie: Vytvoří sloupce o minimální šířce 180px, zbytek místa se rovnoměrně rozdělí */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .footer-links a {
-    color: #737373; /* Netflixová tmavší šedá pro odkazy v patičce */
-    text-decoration: underline; /* Na screenu jsou odkazy podtržené */
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
+  color: #737373; /* Netflixová tmavší šedá pro odkazy v patičce */
+  text-decoration: underline; /* Na screenu jsou odkazy podtržené */
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #fff; /* Po najetí myší odkaz zesvětlá */
+  color: #fff; /* Po najetí myší odkaz zesvětlá */
 }
 
 /* ==========================================================================
    TABLET (min-width: 768px)
    ========================================================================== */
 @media (min-width: 768px) {
-    .btn-register { font-size: 1.2rem; padding: 10px 20px; }
-    .hero-content h1 { font-size: 3.5rem; }
-    .hero-content h2 { font-size: 2rem; }
-    .hero-content p { font-size: 1.5rem; }
-    .email-form { 
-        flex-direction: row; /* Na PC vedle sebe */
-        justify-content: center;
-    }
-    .email-form input { border-radius: 4px 0 0 4px; }
-    .email-form button { border-radius: 0 4px 4px 0; width: auto; }
-    .footer-links {grid-template-columns: repeat(3, 1fr);}
-    .footer-links a { font-size: 1.2rem; }
-
+  .btn-register {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+  .email-form {
+    flex-direction: row; /* Na PC vedle sebe */
+    justify-content: center;
+  }
+  .email-form input {
+    border-radius: 4px 0 0 4px;
+  }
+  .email-form button {
+    border-radius: 0 4px 4px 0;
+    width: auto;
+  }
+  .footer-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-links a {
+    font-size: 1.2rem;
+  }
 }
 
 /* ==========================================================================
    DESKTOP (min-width: 992px)
    ========================================================================== */
-   @media (min-width: 992px) {
-    .btn-register { font-size: 1.5rem; padding: 12px 24px; }
-    .hero-content h1 { font-size: 4rem; }
-    .hero-content h2 { font-size: 2.5rem; }
-    .hero-content p { font-size: 1.8rem; }
-    .footer-links {grid-template-columns: repeat(4, 1fr);}
-   }
+@media (min-width: 992px) {
+  .btn-register {
+    font-size: 1.5rem;
+    padding: 12px 24px;
+  }
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.8rem;
+  }
+  .footer-links {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

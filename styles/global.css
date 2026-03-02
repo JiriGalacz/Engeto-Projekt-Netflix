@@ -1,47 +1,49 @@
 :root {
-    /* Barva přesně podle zadání */
-    --netflix-red: rgb(214, 28, 28);
-    
-    /* Další užitečné proměnné */
-    --bg-dark: #141414;
-    --text-light: #ffffff;
-    --bg-black: #000;
+  /* Barva přesně podle zadání */
+  --netflix-red: rgb(214, 28, 28);
+
+  /* Další užitečné proměnné */
+  --bg-dark: #141414;
+  --text-light: #ffffff;
+  --bg-black: #000;
 }
 
 body {
-    background-color: var(--bg-black);
-    color: var(--text-light);
-    font-family: Arial, sans-serif; /* Můžeš změnit dle designu */
-    min-height: 100vh; /* Zajistí, že pozadí je přes celou obrazovku, i když je prázdná */
-    display: flex;
-    flex-direction: column;
+  background-color: var(--bg-black);
+  color: var(--text-light);
+  font-family: Arial, sans-serif; /* Můžeš změnit dle designu */
+  min-height: 100vh; /* Zajistí, že pozadí je přes celou obrazovku, i když je prázdná */
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-    padding: 0px;
-    flex-grow: 1; 
+  padding: 0px;
+  flex-grow: 1;
 }
 
 .fa-circle-up {
-    position: fixed; /* Fixní pozice vůči oknu prohlížeče */
-    bottom: 20px;    /* 20px od spodního okraje */
-    right: 20px;     /* 20px od pravého okraje */
-    font-size: 3rem; /* Velikost ikonky */
-    color: var(--netflix-red); /* Červená barva */
-    cursor: pointer; /* Změní kurzor na ručičku */
-    z-index: 1000;   /* Aby byla vždy nad ostatním obsahem */
-    /* Schování a plynulý přechod */
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+  position: fixed; /* Fixní pozice vůči oknu prohlížeče */
+  bottom: 20px; /* 20px od spodního okraje */
+  right: 20px; /* 20px od pravého okraje */
+  font-size: 3rem; /* Velikost ikonky */
+  color: var(--netflix-red); /* Červená barva */
+  cursor: pointer; /* Změní kurzor na ručičku */
+  z-index: 1000; /* Aby byla vždy nad ostatním obsahem */
+  /* Schování a plynulý přechod */
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 /* Třída, kterou přidáme přes JavaScript pro zobrazení */
 .fa-circle-up.visible {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .fa-circle-up:hover {
-    transform: scale(1.1); /* Efekt zvětšení při najetí myší */
+  transform: scale(1.1); /* Efekt zvětšení při najetí myší */
 }

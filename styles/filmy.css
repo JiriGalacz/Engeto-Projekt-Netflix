@@ -1,159 +1,163 @@
 main {
-    padding: 30px 5%; /* Přidáme trochu místa po stranách, aby to nebylo nalepené na kraji */
+  padding: 30px 5%; /* Přidáme trochu místa po stranách, aby to nebylo nalepené na kraji */
 }
 
 main h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    margin-top: 80px; /* Odsazení od fixní hlavičky, kterou jsme řešili minule */
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-top: 80px; /* Odsazení od fixní hlavičky, kterou jsme řešili minule */
 }
-
 
 /* Sekce s roletkou (filtrem) */
 .filter-section {
-    margin: 30px auto 40px auto;
-    display: flex;
-    flex-direction: column; /* Na mobilu štítek a roletka pod sebou */
-    gap: 15px;
-    align-items: center; /* Vycentrování na střed */
-    max-width: 600px;
+  margin: 30px auto 40px auto;
+  display: flex;
+  flex-direction: column; /* Na mobilu štítek a roletka pod sebou */
+  gap: 15px;
+  align-items: center; /* Vycentrování na střed */
+  max-width: 600px;
 }
 
 .filter-section label {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #e5e5e5;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #e5e5e5;
 }
 
 .filter-section select {
-    padding: 10px;
-    background-color: #333;
-    color: var(--text-light);
-    border: 1px solid #555;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
+  padding: 10px;
+  background-color: #333;
+  color: var(--text-light);
+  border: 1px solid #555;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 /* Magie pro galerii filmů - samo-zalamovací bez Media Queries */
 .gallery-grid {
-    display: grid;
-    /* Na mobilu má karta min 140px, zbytek místa se rovnoměrně rozdělí (1fr) */
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 15px; 
-    margin-top: 20px;
+  display: grid;
+  /* Na mobilu má karta min 140px, zbytek místa se rovnoměrně rozdělí (1fr) */
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
 }
 
 /* Styly pro dynamicky vytvořené karty filmů z TypeScriptu */
 .movie-card {
-    background-color: #222;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
+  background-color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .movie-card:hover {
   transform: scale(1.08); /* Filmy na Netflixu po najetí vždy "vyskočí" */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
-    cursor: pointer;
-    z-index: 10; /* Aby se karta při zvětšení nedostala pod ostatní */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  z-index: 10; /* Aby se karta při zvětšení nedostala pod ostatní */
 }
 
 .movie-poster {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Aby se obrázky nedeformovaly */
-    aspect-ratio: 2 / 3; /* Udržuje filmový poměr stran */
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Aby se obrázky nedeformovaly */
+  aspect-ratio: 2 / 3; /* Udržuje filmový poměr stran */
 }
 
 .movie-title {
-    padding: 15px 10px;
-    font-size: 1.1rem;
-    text-align: center;
-    margin-top: auto; /* Zarovná název vždy hezky dolů */
+  padding: 15px 10px;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: auto; /* Zarovná název vždy hezky dolů */
 }
 
 /* Efekt po kliknutí (focus) */
 #movie-filter:focus {
-    border-color: var(--netflix-red);
-    box-shadow: 0 0 8px rgba(214, 28, 28, 0.5);
+  border-color: var(--netflix-red);
+  box-shadow: 0 0 8px rgba(214, 28, 28, 0.5);
 }
 
 /* Stylování samotné roletky */
 #movie-filter {
-background-color: rgba(0, 0, 0, 0.8);
-    color: var(--text-light);
-    border: 1px solid #555;
-    padding: 12px 20px;
-    font-size: 1.1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    outline: none;
-    width: 100%;
-    max-width: 300px;
-    appearance: none; /* Skryje výchozí šipku prohlížeče (přidáme vlastní přes background) */
-    
-    /* Přidání vlastní "Netflix" šipky vpravo */
-    background-image: url('../icons/down-long-solid-full.svg'); /* Cesta k vlastní ikoně šipky */
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    background-size: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--text-light);
+  border: 1px solid #555;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  outline: none;
+  width: 100%;
+  max-width: 300px;
+  appearance: none; /* Skryje výchozí šipku prohlížeče (přidáme vlastní přes background) */
+
+  /* Přidání vlastní "Netflix" šipky vpravo */
+  background-image: url("../icons/down-long-solid-full.svg"); /* Cesta k vlastní ikoně šipky */
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 15px;
 }
 
 /* Efekt po najetí myší na roletku */
 #movie-filter:hover {
-    background-color: rgba(30, 30, 30, 0.9);
+  background-color: rgba(30, 30, 30, 0.9);
 }
 
 /* Efekt po rozkliknutí roletky (focus) */
 #movie-filter:focus {
-    border-color: var(--netflix-red);
-    box-shadow: 0 0 0 2px rgba(214, 28, 28, 0.3); /* Jemnější stín než původně */
+  border-color: var(--netflix-red);
+  box-shadow: 0 0 0 2px rgba(214, 28, 28, 0.3); /* Jemnější stín než původně */
 }
 
 /* Změna barvy pro jednotlivé <option> položky (aby nebyly na Windows bílé) */
 #movie-filter option {
-    background-color: #222;
-    color: white;
+  background-color: #222;
+  color: white;
 }
-
 
 .loading-text {
-    grid-column: 1 / -1; /* Roztáhne text načítání přes celou šířku gridu */
-    text-align: center;
-    font-size: 1.2rem;
-    color: var(--netflix-red);
+  grid-column: 1 / -1; /* Roztáhne text načítání přes celou šířku gridu */
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--netflix-red);
 }
-
 
 /* ==========================================================================
    TABLET (min-width: 768px)
    ========================================================================== */
 @media (min-width: 768px) {
-    .filter-section {
-        flex-direction: row; /* Vedle sebe na tabletu/PC */
-        align-items: center;
-    }
-    main h2 {
-        font-size: 2.5rem;
-        text-align: left; /* Na PC můžeme nechat nadpis zarovnaný doleva */
-    }
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Větší karty na PC */
-    }
+  .filter-section {
+    flex-direction: row; /* Vedle sebe na tabletu/PC */
+    align-items: center;
+  }
+  main h2 {
+    font-size: 2.5rem;
+    text-align: left; /* Na PC můžeme nechat nadpis zarovnaný doleva */
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* Větší karty na PC */
+  }
 }
 
 /* ==========================================================================
    DESKTOP (min-width: 992px)
    ========================================================================== */
-   @media (min-width: 992px) {
-    .filter-section {
-        justify-content: flex-start; /* Na PC zarovnáme roletku doleva pod nadpis */
-        margin-left: 0;
-    }
-    
-   }
+@media (min-width: 992px) {
+  .filter-section {
+    justify-content: flex-start; /* Na PC zarovnáme roletku doleva pod nadpis */
+    margin-left: 0;
+  }
+}

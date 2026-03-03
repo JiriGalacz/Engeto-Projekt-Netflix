@@ -1,17 +1,4 @@
-/* Vycentrování celého obsahu na stránce s registrací */
-.btn-main-page {
-  background-color: var(--netflix-red);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-.btn-main-page:hover {
-  background-color: rgb(190, 20, 20);
-}
+
 main {
   display: flex;
   flex-direction: column;

@@ -48,6 +48,7 @@ main h2 {
   background-color: #222;
   border-radius: 8px;
   overflow: hidden;
+  transform: rotate(3deg);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -57,7 +58,7 @@ main h2 {
 }
 
 .movie-card:hover {
-  transform: scale(1.08); /* Filmy na Netflixu po najetí vždy "vyskočí" */
+  transform: scale(1.08) rotate(0deg); /* Filmy na Netflixu po najetí vždy "vyskočí" */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
   cursor: pointer;
   z-index: 10; /* Aby se karta při zvětšení nedostala pod ostatní */

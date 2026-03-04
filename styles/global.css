@@ -48,7 +48,7 @@ main {
   transform: scale(0.98);
 }
 
-.fa-circle-up {
+.scroll-up-btn {
   position: fixed; 
   bottom: 20px; 
   right: 20px; 
@@ -65,12 +65,12 @@ main {
 }
 
 /* Třída, kterou přidáme přes JavaScript pro zobrazení */
-.fa-circle-up.visible {
+.scroll-up-btn.visible {
   opacity: 1;
   visibility: visible;
 }
 
-.fa-circle-up:hover {
+.scroll-up-btn:hover {
   transform: scale(1.1); /* Efekt zvětšení při najetí myší */
 }
 

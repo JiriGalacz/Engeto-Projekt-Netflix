@@ -33,7 +33,7 @@ export function initFormValidation() {
         const successMsg = document.createElement('div');
         successMsg.classList.add('success-message');
         // Připravíme si šablonu s prázdným <strong>
-        successMsg.innerHTML = `<i class="fa-regular fa-circle-check"></i> Vítejte! Účet pro <strong class="user-email-display"></strong> byl úspěšně vytvořen.`;
+        successMsg.innerHTML = `✅ Vítejte! Účet pro <strong class="user-email-display"></strong> byl úspěšně vytvořen.`;
         // Zabezpečení proti XSS - text se vloží čistě jako text, ne jako HTML
         const emailStrongElement = successMsg.querySelector('.user-email-display');
         if (emailStrongElement) {

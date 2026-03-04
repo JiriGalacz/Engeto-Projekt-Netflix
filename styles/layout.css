@@ -6,7 +6,8 @@ header {
   padding: 20px 5%;
   background-color: transparent; /* Aby to nerušilo pozadí stránky */
   width: 100%;
-  position: absolute; /* Přichytí logo nahoru, aniž by posouvalo zbytek stránky */
+   background-color: var(--bg-black);
+  position: sticky;
   height: 60px;
   top: 0;
   left: 0;
@@ -41,21 +42,6 @@ nav a {
 
 nav a:hover {
   color: var(--netflix-red);
-}
-
-/* Ikonka šipky nahoru */
-.fa-circle-up {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 2.5rem;
-  color: var(--netflix-red);
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.fa-circle-up:hover {
-  transform: scale(1.1); /* Efekt mírného zvětšení */
 }
 
 /* ==========================================================================

@@ -25,7 +25,7 @@ main {
 .btn-netflix {
   background-color: var(--netflix-red);
   color: white;
-  padding: 12px 24px;
+  padding: 8px 16px;
   border: none;
   border-radius: 20px; /* Sjednocené zaoblení */
   text-decoration: none;
@@ -49,13 +49,13 @@ main {
 }
 
 .fa-circle-up {
-  position: fixed; /* Fixní pozice vůči oknu prohlížeče */
-  bottom: 20px; /* 20px od spodního okraje */
-  right: 20px; /* 20px od pravého okraje */
-  font-size: 3rem; /* Velikost ikonky */
-  color: var(--netflix-red); /* Červená barva */
-  cursor: pointer; /* Změní kurzor na ručičku */
-  z-index: 1000; /* Aby byla vždy nad ostatním obsahem */
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  font-size: 3rem; 
+  color: var(--netflix-red); 
+  cursor: pointer; 
+  z-index: 1000; 
   /* Schování a plynulý přechod */
   opacity: 0;
   visibility: hidden;
@@ -72,4 +72,14 @@ main {
 
 .fa-circle-up:hover {
   transform: scale(1.1); /* Efekt zvětšení při najetí myší */
+}
+
+/* ==========================================================================
+   TABLET (min-width: 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+  .btn-netflix {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
 }

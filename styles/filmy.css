@@ -78,12 +78,6 @@ main h2 {
   margin-top: auto; /* Zarovná název vždy hezky dolů */
 }
 
-/* Efekt po kliknutí (focus) */
-#movie-filter:focus {
-  border-color: var(--netflix-red);
-  box-shadow: 0 0 8px rgba(214, 28, 28, 0.5);
-}
-
 /* Stylování samotné roletky */
 #movie-filter {
   background-color: rgba(0, 0, 0, 0.8);

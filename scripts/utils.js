@@ -1,5 +1,5 @@
 export function initScrollUpButton() {
-    const scrollUpBtn = document.querySelector('.fa-circle-up');
+    const scrollUpBtn = document.querySelector('.scroll-up-btn');
     if (!scrollUpBtn)
         return;
     window.addEventListener('scroll', () => {

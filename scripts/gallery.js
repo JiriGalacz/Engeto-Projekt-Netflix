@@ -31,7 +31,10 @@ function renderMovies(movies, container) {
         // Ošetření chyby při načítání obrázku z existujícího (ale nefunkčního) odkazu
         imgElement.onerror = () => {
             imgElement.onerror = null;
-            imgElement.src = 'pictures/no-image.jpg';
+            imgElement.src = 'pictures/netflix-logo.png'; // Nebo jakýkoliv jiný obrázek
+            // PŘIDÁNO: Přinutíme obrázek, aby se zmenšil a vešel se do karty
+            imgElement.style.objectFit = 'contain';
+            imgElement.style.padding = '20px'; // Aby logo nebylo nalepené na okrajích karty
         };
         imgElement.alt = `Plakát k filmu ${show.name}`;
         imgElement.classList.add('movie-poster');

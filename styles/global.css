@@ -49,19 +49,16 @@ main {
 }
 
 .scroll-up-btn {
-  position: fixed; 
-  bottom: 20px; 
-  right: 20px; 
-  font-size: 3rem; 
-  color: var(--netflix-red); 
-  cursor: pointer; 
-  z-index: 1000; 
-  /* Schování a plynulý přechod */
+position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 40px; 
+  height: 40px; 
+  cursor: pointer;
+  z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
 }
 
 /* Třída, kterou přidáme přes JavaScript pro zobrazení */
@@ -81,5 +78,9 @@ main {
   .btn-netflix {
     font-size: 1.2rem;
     padding: 10px 20px;
+  }
+  .scroll-up-btn {
+    width: 50px;
+    height: 50px;
   }
 }

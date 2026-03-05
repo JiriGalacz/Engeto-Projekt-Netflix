@@ -32,7 +32,7 @@ nav {
 
 /* Odkazy v navigaci */
 nav a {
-  color: var(--text-light);
+  color: var(--text-primary);
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;

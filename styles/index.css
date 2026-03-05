@@ -9,9 +9,9 @@
   background:
     linear-gradient(
       to top,
-      rgb(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.7) 50%,
-      rgba(0, 0, 0, 0.5) 100%
+      rgba(var(--bg-black-rgb), 1) 0%,
+      rgba(var(--bg-black-rgb), 0.7) 50%,
+      rgba(var(--bg-black-rgb), 0.5) 100%
     ),
     url("../pictures/background.jpg") center/cover no-repeat;
   padding: 20px;
@@ -86,7 +86,7 @@
   width: 100%;
   max-width: 250px; /* Na PC nebudou větší než 250px */
   border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 10px rgba(var(--bg-black-rgb), 0.5);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -95,7 +95,7 @@
 /* Efekt povyskočení po najetí myši */
 .posters-container img:hover {
   transform: scale(1.08);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 20px rgba(var(--bg-black-rgb), 0.8);
   cursor: pointer;
   z-index: 10;
 }

@@ -1,10 +1,9 @@
-
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 50px 20px; /* Odsazení shora a zespodu, zleva a zprava trochu méně */
+  margin: 50px 20px;
 }
 
 main h2 {
@@ -16,7 +15,7 @@ main h2 {
 
 /* Samotný box formuláře */
 #registration-form {
-  background-color: rgba(0, 0, 0, 0.75); /* Tmavý průhledný box */
+  background-color: var(--overlay-dark); /* Tmavý průhledný box */
   padding: 40px 30px;
   border-radius: 8px;
   width: 100%;
@@ -43,8 +42,8 @@ main h2 {
 
 /* Políčka pro psaní */
 .input-group input {
-  background-color: #333;
-  color: var(--text-light);
+  background-color: var(--surface-medium);
+  color: var(--text-primary);
   border: none;
   border-radius: 4px;
   padding: 12px 15px;
@@ -57,13 +56,13 @@ main h2 {
 
 /* Efekt po kliknutí do políčka (focus) */
 .input-group input:focus {
-  background-color: #444;
-  outline: 2px solid var(--netflix-red); /* Místo výchozího modrého dáme náš červený */
+  background-color: var(--surface-light);
+  outline: 2px solid var(--netflix-red);
 }
 
 .input-group .form-help {
   font-size: 0.7rem;
-  color: #bbb;
+  color: var(--text-help);
 }
 
 /* Stylování chybového textu */
@@ -82,30 +81,23 @@ main h2 {
 /* Třída, kterou přidáme políčku přes JS, když je v něm chyba */
 .input-error {
   border: 2px solid var(--netflix-red) !important;
-  background-color: rgba(
-    214,
-    28,
-    28,
-    0.1
-  ) !important; /* Lehce červené pozadí */
+  background-color: var(--bg-error-light) !important;
 }
 
 /* Třída pro zprávu o úspěchu (tu vytvoříme přes TypeScript) */
 .success-message {
-  color: #46d369; /* Zelená barva pro úspěch */
-  background-color: rgba(70, 211, 105, 0.1);
+  color: var(--color-success);
+  background-color: var(--bg-success-light);
   padding: 20px;
   border-radius: 4px;
   text-align: center;
   font-size: 1.2rem;
-  border: 1px solid #46d369;
+  border: 1px solid var(--color-success);
 }
 
 /* Políčko je správně vyplněné (a uživatel do něj už něco napsal) */
 .input-group input:not(:placeholder-shown):valid {
-  outline: 2px solid #46d369 !important;
-  /* Volitelně můžete přidat i velmi jemné zelené pozadí, podobně jako u vaší chyby: */
-  /* background-color: rgba(70, 211, 105, 0.05); */
+  outline: 2px solid var(--color-success) !important;
 }
 
 /* Políčko je vyplněné špatně (a uživatel do něj už něco napsal) */
@@ -118,10 +110,10 @@ main h2 {
    ========================================================================== */
 @media (min-width: 768px) {
   #registration-form {
-    display: grid; /* Změníme flex na grid */
-    grid-template-columns: 1fr 1fr; /* Vytvoří 2 stejně široké sloupce */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     max-width: 700px; /* Zvětšíme max. šířku, aby se 2 sloupce hezky vešly */
-    align-items: start; /* Zarovná políčka hezky k hornímu okraji */
+    align-items: start;
   }
 
   /* Tlačítko pro registraci chceme roztáhnout přes oba sloupce (úplně dolů) */

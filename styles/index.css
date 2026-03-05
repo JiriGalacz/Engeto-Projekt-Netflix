@@ -51,9 +51,9 @@
   font-size: 1rem;
   width: 100%;
   max-width: 400px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 1px solid gray;
-  color: white;
+  background-color: var(--overlay-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
   border-radius: 4px;
 }
 
@@ -70,10 +70,10 @@
   flex-direction: column; /* Řadí obsah (plakáty a tlačítko) pod sebe */
   align-items: center; /* Vycentruje vše na střed */
   padding: 60px 20px;
-  background-color: #000; /* Černé pozadí podle vzoru */
+  background-color: var(--bg-black);
 }
 
-/* Kontejner, ve kterém leží pouze ty 3 obrázky */
+/* Kontejner, ve kterém leží pouze 3 obrázky */
 .posters-container {
   display: flex;
   flex-wrap: wrap; /* Na malých mobilech se obrázky zlomí pod sebe */
@@ -82,7 +82,6 @@
   margin-bottom: 40px; /* Udělá místo nad tlačítkem */
 }
 
-/* Samotné obrázky (plakáty) */
 .posters-container img {
   width: 100%;
   max-width: 250px; /* Na PC nebudou větší než 250px */
@@ -102,27 +101,27 @@
 }
 /* --- Patička --- */
 footer {
-  background-color: #000;
+  background-color: var(--bg-black);
   padding: 60px 10%; /* Velké odsazení zleva a zprava */
   margin-bottom: 20px;
 }
 
 .footer-links {
   display: grid;
-  /* Magie: Vytvoří sloupce o minimální šířce 180px, zbytek místa se rovnoměrně rozdělí */
+  /*  Vytvoří sloupce o minimální šířce 180px, zbytek místa se rovnoměrně rozdělí */
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
 .footer-links a {
-  color: #737373; /* Netflixová tmavší šedá pro odkazy v patičce */
-  text-decoration: underline; /* Na screenu jsou odkazy podtržené */
+  color: var(--text-muted);
+  text-decoration: underline;
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #fff; /* Po najetí myší odkaz zesvětlá */
+  color: var(--text-primary); /* Po najetí myší odkaz zesvětlá */
 }
 
 /* ==========================================================================
@@ -143,7 +142,7 @@ footer {
     font-size: 1.5rem;
   }
   .email-form {
-    flex-direction: row; /* Na PC vedle sebe */
+    flex-direction: row; /* Na Tabletu a PC vedle sebe */
     justify-content: center;
   }
   .email-form input {
@@ -153,7 +152,6 @@ footer {
     padding: 12px 40px;
     border-radius: 0 4px 4px 0;
     width: auto;
-
   }
   .footer-links {
     grid-template-columns: repeat(3, 1fr);
@@ -167,7 +165,6 @@ footer {
    DESKTOP (min-width: 992px)
    ========================================================================== */
 @media (min-width: 992px) {
-
   .hero-content h1 {
     font-size: 4rem;
   }

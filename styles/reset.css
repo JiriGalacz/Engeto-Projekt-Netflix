@@ -1,6 +1,6 @@
 /* Vynulování základních okrajů a nastavení box-modelu */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Zabrání tomu, aby padding zvětšoval šířku elementu */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Zabrání tomu, aby padding zvětšoval šířku elementu */
 }

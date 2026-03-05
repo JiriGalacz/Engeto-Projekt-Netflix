@@ -1,10 +1,12 @@
 :root {
   /* --- ZNAČKA (Brand) --- */
   --netflix-red: rgb(214, 28, 28);
+  --netflix-red-rgb: 214, 28, 28; /* Pro použití v rgba() */
   --netflix-red-hover: rgb(190, 20, 20);
 
   /* --- POZADÍ A POVRCHY (Backgrounds & Surfaces) --- */
   --bg-black: #000000; /* Úplně černé pozadí webu/patičky */
+  --bg-black-rgb: 0, 0, 0; /* Pro použití v rgba() */
   --bg-dark: #141414; /* Netflix tmavé pozadí (pro případné sekce) */
   --surface-dark: #222222; /* Karty filmů, pozadí položek v roletce */
   --surface-medium: #333333; /* Pozadí inputů a roletky (select) */

@@ -4,8 +4,8 @@
 import type { ApiResponse } from "./movie.js";
 /**
  * Funkce stáhne filmy z TVMaze API podle hledaného výrazu
- * @param query Hledaný výraz (např. "girl", "boy")
- * @returns Pole výsledků nebo prázdné pole v případě chyby
+ * @param {string} query Hledaný výraz (např. "batman", "zombie", "comedy" apod.)
+ * @returns {Promise<ApiResponse[]>} Pole výsledků nebo prázdné pole v případě chyby
  */
 export const fetchMovies = async (query: string): Promise<ApiResponse[]> => {
   try {

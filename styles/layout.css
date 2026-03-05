@@ -1,4 +1,9 @@
-/* Globální hlavička s logem pro všechny stránky */
+/* ==========================================================================
+   LAYOUT.CSS
+   Styly pro opakující se strukturní prvky (Hlavička, Navigace, Patička).
+   ========================================================================== */
+
+/* --- 1. HLAVIČKA (Header) --- */
 header {
   display: flex;
   justify-content: space-between;
@@ -22,7 +27,8 @@ header {
   width: 120px;
   height: 45px;
 }
-/* Navigace */
+
+/* --- 2. NAVIGACE (Nav) --- */
 nav {
   display: flex;
   flex-wrap: wrap; /* Pro velmi malé displeje (300px) se odkazy hezky zalomí */
@@ -43,6 +49,31 @@ nav a:hover {
   color: var(--netflix-red);
 }
 
+/* --- 3. PATIČKA (Footer) --- */
+/* --- Patička --- */
+footer {
+  background-color: var(--bg-black);
+  padding: 60px 10%; /* Velké odsazení zleva a zprava */
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: grid;
+  /*  Vytvoří sloupce o minimální šířce 180px, zbytek místa se rovnoměrně rozdělí */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--text-primary); /* Po najetí myší odkaz zesvětlá */
+}
 /* ==========================================================================
    TABLET (min-width: 768px)
    ========================================================================== */

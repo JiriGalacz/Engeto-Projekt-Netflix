@@ -1,6 +1,6 @@
-//Třída reprezentující jeden film
-
-// Definice struktury pro samotný seriál/film
+/**
+ * Třída reprezentující jeden seriál/film získaný z TVMaze API.
+ */
 export interface Show {
   id: number;
   name: string;
@@ -10,7 +10,9 @@ export interface Show {
   } | null; // Některé filmy nemusí mít obrázek, proto "null"
 }
 
-// TVMaze API vrací pole objektů, kde každý má 'score' a 'show'
+/**
+ * Struktura odpovědi z TVMaze API, kde každý objekt má 'score' a 'show'.
+ */
 export interface ApiResponse {
   score: number;
   show: Show;

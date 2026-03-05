@@ -1,18 +1,43 @@
 :root {
-  /* Barva přesně podle zadání */
+  /* --- ZNAČKA (Brand) --- */
   --netflix-red: rgb(214, 28, 28);
+  --netflix-red-hover: rgb(190, 20, 20);
 
-  /* Další užitečné proměnné */
-  --bg-dark: #141414;
-  --text-light: #ffffff;
-  --bg-black: #000;
+  /* --- POZADÍ A POVRCHY (Backgrounds & Surfaces) --- */
+  --bg-black: #000000; /* Úplně černé pozadí webu/patičky */
+  --bg-dark: #141414; /* Netflix tmavé pozadí (pro případné sekce) */
+  --surface-dark: #222222; /* Karty filmů, pozadí položek v roletce */
+  --surface-medium: #333333; /* Pozadí inputů a roletky (select) */
+  --surface-light: #444444; /* Aktivní stav inputů (focus) */
+
+  /* Průhledná pozadí (Overlays) */
+  --overlay-dark: rgba(0, 0, 0, 0.75); /* Pozadí registračního formuláře */
+
+  /* --- TEXTY (Typography) --- */
+  --text-primary: #ffffff; /* Hlavní nadpisy a texty */
+  --text-secondary: #e5e5e5; /* Popisky polí (labely) */
+  --text-help: #bbbbbb; /* Doplňující texty a nápovědy */
+  --text-muted: #737373; /* Nejméně výrazný text (např. patička) */
+
+  /* --- RÁMEČKY (Borders) --- */
+  --border-color: #555555; /* Standardní rámeček inputů a roletky */
+
+  /* --- STAVOVÉ BARVY (Status/Validation) --- */
+  --color-success: #46d369; /* Zelená pro úspěch */
+  --bg-success-light: rgba(70, 211, 105, 0.1); /* Zelené průhledné pozadí */
+  --bg-error-light: rgba(
+    214,
+    28,
+    28,
+    0.1
+  ); /* Červené průhledné pozadí pro chybu */
 }
 
 body {
   background-color: var(--bg-black);
-  color: var(--text-light);
-  font-family: Arial, sans-serif; /* Můžeš změnit dle designu */
-  min-height: 100vh; /* Zajistí, že pozadí je přes celou obrazovku, i když je prázdná */
+  color: var(--text-primary);
+  font-family: Arial, sans-serif;
+  min-height: 100vh; /* Zajistí, že pozadí je přes celou obrazovku */
   display: flex;
   flex-direction: column;
 }
@@ -24,7 +49,7 @@ main {
 
 .btn-netflix {
   background-color: var(--netflix-red);
-  color: white;
+  color: var(--text-primary);
   padding: 8px 16px;
   border: none;
   border-radius: 20px; /* Sjednocené zaoblení */
@@ -35,12 +60,14 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .btn-netflix:hover {
-  background-color: rgb(190, 20, 20);
-  color: white;
+  background-color: var(--netflix-red-hover);
+  color: var(--text-primary);
   transform: scale(1.05); /* Jemné zvětšení pro interaktivitu */
 }
 
@@ -49,16 +76,19 @@ main {
 }
 
 .scroll-up-btn {
-position: fixed;
+  position: fixed;
   bottom: 10px;
   right: 10px;
-  width: 40px; 
-  height: 40px; 
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.2s ease;
 }
 
 /* Třída, kterou přidáme přes JavaScript pro zobrazení */

@@ -25,7 +25,10 @@ main h2 {
   flex-direction: column;
   gap: 20px;
 }
-
+#registration-form button {
+  padding: 15px; /* Specifické pro tento formulář */
+  margin-top: 10px;
+}
 /* Obal pro label a input */
 .input-group {
   display: flex;
@@ -87,28 +90,6 @@ main h2 {
   ) !important; /* Lehce červené pozadí */
 }
 
-/* Netflix červené tlačítko */
-#registration-form button {
-  background-color: var(--netflix-red);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 15px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
-}
-
-#registration-form button:hover {
-  background-color: rgb(
-    190,
-    20,
-    20
-  ); /* O něco tmavší červená při najetí myší */
-}
-
 /* Třída pro zprávu o úspěchu (tu vytvoříme přes TypeScript) */
 .success-message {
   color: #46d369; /* Zelená barva pro úspěch */
@@ -148,10 +129,4 @@ main h2 {
     grid-column: 1 / -1;
     margin-top: 15px;
   }
-}
-
-/* ==========================================================================
-   DESKTOP (min-width: 992px)
-   ========================================================================== */
-@media (min-width: 992px) {
 }

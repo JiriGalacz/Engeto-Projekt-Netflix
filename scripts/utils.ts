@@ -1,3 +1,7 @@
+/**
+ * Inicializuje tlačítko pro návrat na začátek stránky (Scroll Up).
+ * Tlačítko se zobrazí až po odscrollování o 300px dolů.
+ */
 export function initScrollUpButton() {
   const scrollUpBtn = document.querySelector(
     ".scroll-up-btn",

@@ -59,13 +59,6 @@
 
 .email-form button {
   padding: 10px 20px;
-  font-size: 1.2rem;
-  background-color: var(--netflix-red);
-  color: white;
-  border: none;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
   width: 100%;
   max-width: 200px;
 }

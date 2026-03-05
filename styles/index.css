@@ -1,4 +1,9 @@
-/* --- První sekce (Hero) --- */
+/* ==========================================================================
+   INDEX.CSS
+   Styly specifické pouze pro hlavní stránku (Hero, Doporučené filmy).
+   ========================================================================== */
+
+/* --- 1. HERO SEKCE --- */
 .hero {
   position: relative;
   min-height: 90vh;
@@ -63,7 +68,7 @@
   max-width: 200px;
 }
 
-/* --- Druhá sekce (Ukázka 3 filmů) --- */
+/* --- 2. DOPORUČENÉ FILMY (Featured) --- */
 .featured-movies {
   margin-top: 20px;
   display: flex;
@@ -99,31 +104,8 @@
   cursor: pointer;
   z-index: 10;
 }
-/* --- Patička --- */
-footer {
-  background-color: var(--bg-black);
-  padding: 60px 10%; /* Velké odsazení zleva a zprava */
-  margin-bottom: 20px;
-}
 
-.footer-links {
-  display: grid;
-  /*  Vytvoří sloupce o minimální šířce 180px, zbytek místa se rovnoměrně rozdělí */
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.footer-links a {
-  color: var(--text-muted);
-  text-decoration: underline;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: var(--text-primary); /* Po najetí myší odkaz zesvětlá */
-}
-
+/* --- 3. MEDIA QUERIES --- */
 /* ==========================================================================
    TABLET (min-width: 768px)
    ========================================================================== */

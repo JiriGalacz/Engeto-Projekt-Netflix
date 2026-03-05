@@ -1,6 +1,13 @@
 import { fetchMovies } from "./api-handler.js";
 import type { ApiResponse } from "./movie.js";
 
+/**
+ * ============================================================================
+ * INICIALIZACE GALERIE
+ * Nastavuje posluchače událostí pro filtrování filmů.
+ * ============================================================================
+ */
+
 export function initGallery() {
   const movieFilter = document.getElementById(
     "movie-filter",
@@ -16,12 +23,21 @@ export function initGallery() {
     const query = select.value;
     if (!query) return;
 
+    // Zobrazení stavu načítání
     galleryGrid.innerHTML = '<p class="loading-text">Načítám filmy...</p>';
     const moviesData = await fetchMovies(query);
     renderMovies(moviesData, galleryGrid);
   });
 }
 
+/**
+ * ============================================================================
+ * VYKRESLOVÁNÍ DAT (RENDER)
+ * Zpracuje data z API a dynamicky vytvoří HTML elementy (karty filmů).
+ * ============================================================================
+ * * @param {ApiResponse[]} movies - Pole filmů z API
+ * @param {HTMLElement} container - HTML element, do kterého se filmy vloží
+ */
 function renderMovies(movies: ApiResponse[], container: HTMLElement): void {
   container.innerHTML = "";
 
@@ -36,12 +52,12 @@ function renderMovies(movies: ApiResponse[], container: HTMLElement): void {
     const movieCard = document.createElement("article");
     movieCard.classList.add("movie-card");
 
-    // Odkazujeme přímo na váš jistý lokální obrázek
+    // Odkazujeme přímo na lokální obrázek
     const imageUrl = show.image?.medium || "pictures/no-image.jpg";
     const imgElement = document.createElement("img");
     imgElement.src = imageUrl;
 
-    // Ošetření chyby při načítání obrázku z existujícího (ale nefunkčního) odkazu
+    // Fallback: Pokud obrázek z URL selže, vložíme logo Netflixu
     imgElement.onerror = () => {
       imgElement.onerror = null;
       imgElement.src = "pictures/netflix-logo.png"; // Nebo jakýkoliv jiný obrázek
@@ -54,10 +70,12 @@ function renderMovies(movies: ApiResponse[], container: HTMLElement): void {
     imgElement.alt = `Plakát k filmu ${show.name}`;
     imgElement.classList.add("movie-poster");
 
+    // --- Nadpis ---
     const titleElement = document.createElement("h3");
     titleElement.textContent = show.name;
     titleElement.classList.add("movie-title");
 
+    // --- Sestavení karty ---
     movieCard.appendChild(imgElement);
     movieCard.appendChild(titleElement);
     container.appendChild(movieCard);

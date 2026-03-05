@@ -1,3 +1,9 @@
+/* ==========================================================================
+   FILMY.CSS
+   Styly pro galerii filmů a jejich filtrování.
+   ========================================================================== */
+
+/* --- 1. ZÁKLADNÍ ROZLOŽENÍ (Base) --- */
 main {
   padding: 30px 5%;
 }
@@ -8,6 +14,8 @@ main h2 {
   margin-top: 80px; /* Odsazení od fixní hlavičky*/
 }
 
+
+/* --- 2. FILTR A ROLETKA (Filter Section) --- */
 /* Sekce s roletkou */
 .filter-section {
   margin: 30px auto 40px auto;
@@ -34,6 +42,7 @@ main h2 {
   cursor: pointer;
 }
 
+/* --- 3. GALERIE A FILMOVÉ KARTY (Gallery Grid) --- */
 /* Galerie filmu - samo-zalamovací bez Media Queries */
 .gallery-grid {
   display: grid;
@@ -59,7 +68,7 @@ main h2 {
 
 .movie-card:hover {
   transform: scale(1.08) rotate(0deg); /* Filmy na Netflixu po najetí "vyskočí" */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 20px rgba(var(--bg-black-rgb), 0.8);
   cursor: pointer;
   z-index: 10; /* Aby se karta při zvětšení nedostala pod ostatní */
 }
@@ -105,13 +114,13 @@ main h2 {
 
 /* Efekt po najetí myší na roletku */
 #movie-filter:hover {
-  background-color: rgba(30, 30, 30, 0.9);
+  background-color: var(--surface-light);
 }
 
 /* Efekt po rozkliknutí roletky (focus) */
 #movie-filter:focus {
   border-color: var(--netflix-red);
-  box-shadow: 0 0 0 2px rgba(214, 28, 28, 0.3);
+  box-shadow: 0 0 0 2px rgba(var(--netflix-red-rgb), 0.3);
 }
 
 /* Změna barvy pro jednotlivé <option> položky (aby nebyly na Windows bílé) */
@@ -127,6 +136,7 @@ main h2 {
   color: var(--netflix-red);
 }
 
+/* --- 4. MEDIA QUERIES --- */
 /* ==========================================================================
    TABLET (min-width: 768px)
    ========================================================================== */

@@ -9,8 +9,6 @@ import { initScrollUpButton } from "./utils.js";
  * Spouští jednotlivé moduly pouze na stránkách, kde jsou potřeba.
  * ============================================================================
  */
-// POČKÁME, AŽ SE NAČTE CELÁ STRÁNKA (HTML)
-document.addEventListener("DOMContentLoaded", () => {
 
  // --- 1. Modul Galerie (filmy.html) ---
   if (document.getElementById("movie-gallery")) {
@@ -26,4 +24,4 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".scroll-up-btn")) {
     initScrollUpButton();
   }
-});
+

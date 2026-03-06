@@ -1,3 +1,6 @@
+/**
+ * Třída reprezentující jeden seriál/film získaný z TVMaze API.
+ */
 export interface Show {
     id: number;
     name: string;
@@ -6,6 +9,9 @@ export interface Show {
         original: string;
     } | null;
 }
+/**
+ * Struktura odpovědi z TVMaze API, kde každý objekt má 'score' a 'show'.
+ */
 export interface ApiResponse {
     score: number;
     show: Show;

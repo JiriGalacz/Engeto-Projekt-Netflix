@@ -10,7 +10,7 @@ import { initScrollUpButton } from "./utils.js";
  * ============================================================================
  */
 
- // --- 1. Modul Galerie (filmy.html) ---
+ // --- 1. Modul Galerie (movie.html) ---
   if (document.getElementById("movie-gallery")) {
     initGallery();
   }

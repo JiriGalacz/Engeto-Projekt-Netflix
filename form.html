@@ -10,13 +10,25 @@
     <link rel="stylesheet" href="styles/form.css" />
   </head>
   <body>
+
+    <!-- ========================================== -->
+    <!-- HLAVIČKA STRÁNKY (HEADER)                  -->
+    <!-- ========================================== -->
     <header>
       <a href="index.html" class="logo" aria-label="Domů"></a>
       <a href="index.html" class="btn-netflix">Hlavní stránka</a>
     </header>
+
+    <!-- ========================================== -->
+    <!-- HLAVNÍ OBSAH STRÁNKY (MAIN)                -->
+    <!-- ========================================== -->
     <main>
       <h2>Vytvořte si účet</h2>
+
+      <!-- --- Registrační formulář --- -->
       <form id="registration-form">
+
+        <!-- Pole: Jméno -->
         <div class="input-group">
           <label for="first-name">Jméno:</label>
           <input
@@ -28,6 +40,7 @@
           />
         </div>
 
+        <!-- Pole: Příjmení -->
         <div class="input-group">
           <label for="surname">Příjmení:</label>
           <input
@@ -39,6 +52,7 @@
           />
         </div>
 
+        <!-- Pole: E-mail -->
         <div class="input-group">
           <label for="user-email">E-mailová adresa:</label>
           <input
@@ -50,6 +64,7 @@
           />
         </div>
 
+        <!-- Pole: Heslo -->
         <div class="input-group">
           <label for="user-password">Heslo:</label>
           <input
@@ -63,6 +78,7 @@
           <small class="form-help">Heslo musí obsahovat alespoň 8 znaků.</small>
         </div>
 
+        <!-- Pole: Heslo znovu (kontrola shody)-->
         <div class="input-group">
           <label for="user-repeat-password">Heslo znovu:</label>
           <input
@@ -78,6 +94,7 @@
           >
         </div>
 
+        <!-- Pole: Telefonní číslo (volitelné)-->
         <div class="input-group">
           <label for="user-phone">Telefonní číslo (volitelné):</label>
           <input
@@ -89,9 +106,15 @@
           />
         </div>
 
+        <!-- Odesílací tlačítko -->
         <button type="submit" class="btn-netflix">Zaregistrovat se</button>
+        
       </form>
     </main>
+
+    <!-- ========================================== -->
+    <!-- SCRIPTY A DODATEČNÉ ELEMENTY               -->
+    <!-- ========================================== -->
     <img
       src="icons/circle-up-solid-full.svg"
       class="scroll-up-btn"

@@ -10,14 +10,24 @@
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
+
+    <!-- ========================================== -->
+    <!-- HLAVIČKA STRÁNKY (HEADER)                  -->
+    <!-- ========================================== -->
     <header>
       <a href="index.html" class="logo" aria-label="Domů"></a>
       <nav>
         <a href="form.html">Registrace</a>
-        <a href="filmy.html">Filmy</a>
+        <a href="movie.html">Filmy</a>
       </nav>
     </header>
+
+    <!-- ========================================== -->
+    <!-- HLAVNÍ OBSAH STRÁNKY (MAIN)                -->
+    <!-- ========================================== -->
     <main>
+
+      <!-- --- Úvodní Hero sekce --- -->
       <section class="hero">
         <div class="hero-content">
           <h1>Neomezené sledování filmů, TV pořadů a dalšího obsahu</h1>
@@ -34,6 +44,7 @@
         </div>
       </section>
 
+      <!-- --- Sekce doporučených filmů --- -->
       <section class="featured-movies">
         <div class="posters-container">
           <img src="pictures/avengers.jpg" alt="Avengers: Infinity War" />
@@ -42,8 +53,12 @@
         </div>
         <a href="filmy.html" class="btn-netflix">Najít další filmy</a>
       </section>
+
     </main>
 
+    <!-- ========================================== -->
+    <!-- PATIČKA (FOOTER)                           -->
+    <!-- ========================================== -->
     <footer>
       <div class="footer-links">
         <a href="#">Často kladené dotazy</a>
@@ -67,11 +82,17 @@
         <a href="#">Reklamy</a>
       </div>
     </footer>
+
+    <!-- ========================================== -->
+    <!-- SCRIPTY A DODATEČNÉ ELEMENTY               -->
+    <!-- ========================================== -->
     <img
       src="icons/circle-up-solid-full.svg"
       class="scroll-up-btn"
       alt="Zpět nahoru"
     />
     <script type="module" src="scripts/main.js"></script>
+
+
   </body>
 </html>

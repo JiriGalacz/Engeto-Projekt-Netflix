@@ -41,10 +41,18 @@ export function initFormValidation() {
     }
   };
 
-  // Nasazení event listenerů na pole pro hesla
+// Nasazení event listenerů na pole pro hesla
   if (passwordInput && repeatPasswordInput) {
+    // Reaguje na psaní
     passwordInput.addEventListener("input", validatePasswords);
     repeatPasswordInput.addEventListener("input", validatePasswords);
+    
+    // Reaguje na vložení ze správce hesel
+    passwordInput.addEventListener("change", validatePasswords);
+    repeatPasswordInput.addEventListener("change", validatePasswords);
+
+    // Zavoláme ihned pro případ, že by prohlížeč údaje předvyplnil už při načtení
+    validatePasswords();
   }
 
   // --- Ošetření odeslání formuláře (Submit) ---

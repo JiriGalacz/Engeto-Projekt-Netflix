@@ -9,8 +9,8 @@ import type { ApiResponse } from "./movie.js";
  */
 export const fetchMovies = async (query: string): Promise<ApiResponse[]> => {
   try {
-    const response = await fetch(
-      `https://api.tvmaze.com/search/shows?q=${query}`,
+   const response = await fetch(
+      `https://api.tvmaze.com/search/shows?q=${encodeURIComponent(query)}`,
     );
 
     if (!response.ok) {

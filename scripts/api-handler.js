@@ -1,12 +1,13 @@
 // Funkce pro tahání dat o filmech
+// Důležité: Při importech v prohlížeči (ES Modules) musíme uvádět koncovku .js!
 /**
  * Funkce stáhne filmy z TVMaze API podle hledaného výrazu
- * @param query Hledaný výraz (např. "girl", "boy")
- * @returns Pole výsledků nebo prázdné pole v případě chyby
+ * @param {string} query Hledaný výraz (např. "batman", "zombie", "comedy" apod.)
+ * @returns {Promise<ApiResponse[]>} Pole výsledků nebo prázdné pole v případě chyby
  */
 export const fetchMovies = async (query) => {
     try {
-        const response = await fetch(`https://api.tvmaze.com/search/shows?q=${query}`);
+        const response = await fetch(`https://api.tvmaze.com/search/shows?q=${encodeURIComponent(query)}`);
         if (!response.ok) {
             throw new Error(`Chyba serveru: ${response.status}`);
         }

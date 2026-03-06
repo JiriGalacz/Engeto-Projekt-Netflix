@@ -7,16 +7,25 @@
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/layout.css" />
-    <link rel="stylesheet" href="styles/filmy.css" />
+    <link rel="stylesheet" href="styles/movie.css" />
   </head>
   <body>
+
+    <!-- ========================================== -->
+    <!-- HLAVIČKA STRÁNKY (HEADER)                  -->
+    <!-- ========================================== -->
     <header>
       <a href="index.html" class="logo" aria-label="Domů"></a>
       <a href="index.html" class="btn-netflix">Hlavní stránka</a>
     </header>
+
+    <!-- ========================================== -->
+    <!-- HLAVNÍ OBSAH STRÁNKY (MAIN)                -->
+    <!-- ========================================== -->
     <main>
       <h2>Vyhledejte si svůj oblíbený film</h2>
 
+      <!-- --- Sekce pro filtrování filmů --- -->
       <div class="filter-section">
         <label for="movie-filter">Vyberte téma:</label>
         <select id="movie-filter">
@@ -34,8 +43,13 @@
         </select>
       </div>
 
+      <!-- --- Galerie výsledků (karty filmů) --- -->
       <section id="movie-gallery" class="gallery-grid"></section>
     </main>
+
+    <!-- ========================================== -->
+    <!-- SCRIPTY A DODATEČNÉ ELEMENTY               -->
+    <!-- ========================================== -->
     <img
       src="icons/circle-up-solid-full.svg"
       class="scroll-up-btn"
